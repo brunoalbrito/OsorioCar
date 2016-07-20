@@ -57,8 +57,5 @@ include 'menusystem.php';
             </div>
         </form>
     </div>
-    <!--<iframe name="palco" src="iframeAgenda.php" width="100%"></iframe>-->
-
-
 </body>
 </html>
