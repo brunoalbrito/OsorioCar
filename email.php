@@ -1,5 +1,5 @@
 <?php
-include '../menu.php';
+include 'menu.php';
 ?>   
 <!DOCTYP html>
 <html lang="pt-br">
@@ -10,16 +10,16 @@ include '../menu.php';
     <link rel="stylesheet" type="text/css" href="../css/formularios.css">
 
     <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <script src="../js/jquery-2.2.3.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <link rel="shortcut icon" href="image/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
 
-    <link rel="stylesheet" href="../css/font-awesome.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>  
 <body>  
@@ -28,7 +28,7 @@ include '../menu.php';
             <h1 class="text-center">Email</h1>
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="col-md-6 col-sm-6 col-xs-12 text-middle">
+            <div class="col-md-5 col-sm-6 col-xs-12 text-middle">
                 <form>
                     <div class="form-group">
                         <label>Nome</label>

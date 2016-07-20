@@ -54,9 +54,9 @@
             <li><a href="#">One more separated link</a></li>
         </ul>
     </li>-->
-    <li><a href="view/email.php">Email</a></li>
-    <li><a href="view/endereco.php">Endereço</a></li>
-    <li><a href="view/login.php">Login</a></li>
+    <li><a href="email.php">Email</a></li>
+    <li><a href="endereco.php">Endereço</a></li>
+    <li><a href="login.php">Login</a></li>
 </ul>
 </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->              

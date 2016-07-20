@@ -1,6 +1,6 @@
 <!--MENU-->
 <?php
-include '../menu.php';
+include 'menu.php';
 ?>  
 <!DOCTYP html>
 <html lang="pt-br">
@@ -15,11 +15,11 @@ include '../menu.php';
 
     
 
-    <link rel="shortcut icon" href="../img/favicon.ico">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/content/login/default.css">
-    <script src="../js/jquery-2.2.3.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/content/login/default.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="../css/font-awesome.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
@@ -30,7 +30,7 @@ include '../menu.php';
 <body>    
     <!--Login-->
     <div class="container">
-        <form action="../dao/userauthen.php" method="post">
+        <form action="#" method="post">
             <div class="col-md-4 col-sm-4 col-xs-12 text-middle">
                 <div class="form-group form-group-lg">
                     <label>Nome</label>

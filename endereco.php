@@ -5,20 +5,20 @@
     <meta charset="utf-8">
     <meta name="author" content="Bruno Albuquerque Brito e Pedro Henry">
 
-    <link rel="shortcut icon" href="../image/favicon.ico">
     <link rel="shortcut icon" href="image/favicon.ico">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <script src="../js/jquery-2.2.3.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
 
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 </head>  
 <body>
     <!--MENU-->
     <?php
-    include '../menu.php';
+    include 'menu.php';
     ?>  
     <!--ITENS-->
     <div class="container">
