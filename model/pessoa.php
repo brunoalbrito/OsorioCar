@@ -10,7 +10,7 @@ class Pessoa
 	public function __construct($nome, $telefone){
 		$this->nome = $nome;
 		$this->telefone = $telefone;
-		echo "Criando Pessoa";
+		echo "</br>Criando Pessoa";
 	} 
 }
 

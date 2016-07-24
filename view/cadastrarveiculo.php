@@ -15,7 +15,7 @@ include 'menusystem.php';
 <body>
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="col-md-6 col-sm-12 col-xs-12 text-middle">
-			<form class="text-middle">
+			<form class="text-middle" method='post' action='../control/controller.php?act=cadastrarCarro'>
 				<div class="form-group">
 					<label>Modelo</label>
 					<div class="input-group">
@@ -27,21 +27,21 @@ include 'menusystem.php';
 					<label>Ano</label>
 					<div class="input-group">
 						<span class="input-group-addon"><!-- <i class="fa fa-user" aria-hidden="true"></i> --></span>
-						<input type="text" class="form-control" id="#" name="modelo">
+						<input type="text" class="form-control" id="#" name="ano">
 					</div>
 				</div>
 				<div class="form-group">
 					<label>Marca</label>
 					<div class="input-group">
 						<span class="input-group-addon"><!-- <i class="fa fa-user" aria-hidden="true"></i> --></span>
-						<input type="text" class="form-control" id="#" name="modelo">
+						<input type="text" class="form-control" id="#" name="marca">
 					</div>
 				</div>
 				<div class="form-group">
 					<label>Placa</label>
 					<div class="input-group">
 						<span class="input-group-addon"><!-- <i class="fa fa-user" aria-hidden="true"></i> --></span>
-						<input type="text" class="form-control" id="#" name="modelo">
+						<input type="text" class="form-control" id="#" name="placa">
 					</div>
 				</div>
 				<div class="text-center">

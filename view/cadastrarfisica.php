@@ -24,7 +24,7 @@ include 'menusystem.php';
         <h1 class="text-font">Cadastro</h1>
     </div>
     <div class="col-md-6 col-sm-12 col-xs-12 text-middle">
-        <form class="text-middle" action="teste.php" method="post" style="width:80%">
+        <form class="text-middle" action="../control/controller.php?act=cadastrarFisica" method="post" style="width:80%">
             <div class="form-group">
                 <label>Nome</label>
                 <div class="input-group">
