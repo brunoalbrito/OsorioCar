@@ -25,105 +25,79 @@
 <body>
 	<div class="content">
 
-		<?php 
-
-		include '../control/controller.php';
-
-		$array = Controller::buscarFisica($_GET['nome'],$_GET['sobrenome']);
-
-		// foreach ($array as $value) {
-		// 	print("</br>".$value->nome." / ".$value->sobrenome." / ".$value->telefone." / ".$value->cpf);
-		// }
-
-		foreach ($array as $value) {
-			print '<div class="content">
-
 		<!-- INICIO -->
 
-		<div class="col-md-12 col-sm-12 col-xs-12"	 style="background:blue">
+		<div class='col-md-12 col-sm-12 col-xs-12	' style="background:blue">
 
 
 			<!--PARA FICAR IGUAL-->
-			<!--ID-->
-			<div class="col-md-1 col-sm-12 col-xs-12" style="background:red">
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					ID:
-				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					'.$value->id.'
-				</div>
-			</div>
-
-
 			<!--NOME-->
-			<div class="col-md-1 col-sm-12 col-xs-12" style="background:red">
+			<div class='col-md-2 col-sm-12 col-xs-12' style='background:red'>
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					Nome:
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					'.$value->nome.'
+					Bruno
 				</div>
 			</div>
 
 
 			<!--SOBRENOME-->
-			<div class="col-md-2 col-sm-12 col-xs-12" style="background:red">
+			<div class='col-md-2 col-sm-12 col-xs-12' style='background:red'>
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					Sobrenome:
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					'.$value->sobrenome.'
+					Aparecido Albuquerque Brito
 				</div>
 			</div>
 
 
 			<!--TELEFONE-->
-			<div class="col-md-2 col-sm-12 col-xs-12" style="background:red">
+			<div class='col-md-2 col-sm-12 col-xs-12' style='background:red'>
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					Telefone:
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					'.$value->telefone.'
+					4611-0990
 				</div>
 			</div>
 
 			<!--CPF-->
-			<div class="col-md-2 col-sm-12 col-xs-12" style="background:red">
+			<div class='col-md-2 col-sm-12 col-xs-12' style='background:red'>
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					CPF:
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					'.$value->cpf.'
+					09890987898
 				</div>
 			</div>
 
 
 			<!--Alterar-->
-			<div class="col-md-2 col-sm-6 col-xs-6" style="background:red">
+			<div class='col-md-2 col-sm-12 col-xs-12' style='background:red'>
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					Alterar:
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<a href="#">Alterar</a> 
+					<a href='#'>Alterar</a> 
 				</div>
 			</div>
 
 			<!--Alterar-->
-			<div class="col-md-2 col-sm-6 col-xs-6" style="background:red">
+			<div class='col-md-2 col-sm-12 col-xs-12' style='background:red'>
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					Excluir:
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<a href="#">Excluir</a>
+					<a href='#'>Excluir</a>
 				</div>
 			</div>
 
 
 		</div>
 
-		<!-- FIM -->';
-		}
-		?>
+		<!-- FIM -->
 
 	</div>
 </body>
