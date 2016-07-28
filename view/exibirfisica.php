@@ -35,6 +35,7 @@
 		// 	print("</br>".$value->nome." / ".$value->sobrenome." / ".$value->telefone." / ".$value->cpf);
 		// }
 
+		print_r($array);
 		foreach ($array as $value) {
 			print '<div class="content">
 
