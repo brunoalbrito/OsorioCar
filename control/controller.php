@@ -86,6 +86,23 @@ class Controller
 		echo '</br>Cadastro realizado com sucesso';
 
 	}
+	####BUSCA CARRO
+	####
+	####
+	###
+	public static function buscarCarro($placa){
+		echo "</br>Chamando";
+		$carro = new Carro(null,null,null,$placa);
+		#echo '</br>'.$carro->placa;
+		return $array = CarroDAO::pesquisarCarro($carro);
+
+		// echo '</br>';
+		// foreach ($array as $key => $valueall) {
+		// 	foreach ($valueall as $key => $value) {
+		// 		echo $value." ";
+		// 	}
+		// }
+	}
 
 	public static function registarConserto($data,$valorPecas,$pecasUtilizadas,$descricao,$valorMaodeObra){
 		$conserto = new Conserto($data,floatval($valorPecas),$pecasUtilizadas,$descricao,$valorMaodeObra);

@@ -11,7 +11,7 @@ include 'menusystem.php';
 <body>
 	<div class='content'>
 		<div class="col-md-12 col-sm-12 col-xs-12 text-middle" id="busca"> 
-			<form class="form-inline col-md-8 text-middle" method='post' action="#">
+			<form class="form-inline col-md-8 text-middle" method='post' action="exibircarro.php">
 				<label>Placa</label>
 				<input type="text" class="form-control" name="placa">
 

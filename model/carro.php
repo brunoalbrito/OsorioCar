@@ -9,12 +9,16 @@ class Carro
 	public $marca = null;
 	public $placa = null;
 
-	function __construct($modelo, $ano, $marca, $placa)
+	public function __construct($modelo, $ano, $marca, $placa)
 	{
-		$this->modelo = $modelo;
-		$this->ano = $ano;
-		$this->marca = $marca;
-		$this->placa = $placa;
+		if ($modelo != null) {
+			$this->modelo = $modelo;
+			$this->ano = $ano;
+			$this->marca = $marca;
+			$this->placa = $placa;
+		}else{
+			$this->placa = $placa;
+		}
 	}
 }
 

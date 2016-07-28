@@ -25,73 +25,103 @@
 <body>
 	<div class="content">
 		<div class='col-md-8 col-sm-12 col-xs-12 text-middle'>
+			<?php 
 
-			<!-- MODELO -->
-			<div class='col-md-2 col-sm-2 col-xs-2'>
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					Modelo:
+			include '../control/controller.php';
+			$placa = $_POST['placa'];
+			
+			$array = Controller::buscarCarro($placa);
+			echo '</br>';
+			//print_r($array);
+			for ($i=0; $i < count($array); $i+=2) { 
+				echo"
+				<!--ROW-->
+				<div class='col-md-12 col-sm-12 col-xs-12' style='background:yellow;'>
+				<!--COLUMN-->
+				<div class='col-md-1 col-sm-2 col-xs-12'>
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				ID
 				</div>
-				<!-- REPETIR O NOME AQUI -->
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					Civic 
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				".$array[$i]->id."
 				</div>
-			</div>
+				</div>
 
-			<!--ANO-->
-			<div class='col-md-2 col-sm-12 col-xs-12'>
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					Ano:
+				<!--COLUMN-->
+				<div class='col-md-2 col-sm-2 col-xs-12'>
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				Nome
 				</div>
-				<!-- REPETIR O NOME AQUI -->
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					2015 
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				".$array[$i]->nome."
 				</div>
-			</div>
+				</div>	
 
-			<!-- Marca -->
-			<div class='col-md-2 col-sm-12 col-xs-12'>
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					Marca:
+				<!--COLUMN-->
+				<div class='col-md-2 col-sm-2 col-xs-12'>
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				Modelo
 				</div>
-				<!-- REPETIR O NOME AQUI -->
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					HONDA 
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				".$array[$i+1]->modelo."	
 				</div>
-			</div>
+				</div>	
 
-			<!-- Placa -->
-			<div class='col-md-2 col-sm-12 col-xs-12'>
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					Placa:
+				<!--COLUMN-->
+				<div class='col-md-1 col-sm-2 col-xs-12'>
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				Ano
 				</div>
-				<!-- REPETIR O NOME AQUI -->
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					BJD-9889
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				".$array[$i+1]->ano."	
 				</div>
-			</div>
+				</div>	
 
-			<!-- ALTERAR -->
-			<div class='col-md-2 col-sm-6 col-xs-6'>
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					Alterar:
+				<!--COLUMN-->
+				<div class='col-md-2 col-sm-2 col-xs-12'>
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				Marca
 				</div>
-				<!-- REPETIR O NOME AQUI -->
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					<a href='#'>Alterar</a> 
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				".$array[$i+1]->marca."
 				</div>
-			</div>
+				</div>	
 
-			<!-- EXCLUIR -->
-			<div class='col-md-2 col-sm-6 col-xs-6'>
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					Excluir:
+				<!--COLUMN-->
+				<div class='col-md-2 col-sm-2 col-xs-12'>
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				Placa
 				</div>
-				<!-- REPETIR O NOME AQUI -->
-				<div class='col-md-12 col-sm-12 col-xs-12'>
-					<a href='#'>Excluir</a>
+				<div class='col-md-12 col-sm-12 col-xs-6'>
+				".$array[$i+1]->placa."
 				</div>
-			</div>
+				</div>	
+
+				<!--COLUMN-->
+				<div class='col-md-1 col-sm-2 col-xs-6'>
+				<div class='col-md-12 col-sm-12 col-xs-12'>
+				Alterar
+				</div>
+				<div class='col-md-12 col-sm-12 col-xs-12'>
+				<a href='#''>Alterar</a>	
+				</div>
+				</div>	
+
+				<!--COLUMN-->
+				<div class='col-md-1 col-sm-2 col-xs-6'>
+				<div class='col-md-12 col-sm-12 col-xs-12'>
+				Excluir
+				</div>
+				<div class='col-md-12 col-sm-12 col-xs-12'>
+				<a href='#'>Excluir</a>	
+				</div>
+				</div>				
+				</div>
+				<!-- END ROW -->";			
+			}?>
 		</div>
 	</div>
 </body>
 </html>
+
+
