@@ -25,7 +25,7 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 </head> 
 <body>
-  <nav class="navbar navbar-default" style="margin-bottom: 0px;">
+  <nav class="navbar navbar-default" style="margin-bottom: 0px;border-radius:0px;">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -48,13 +48,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agenda <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="cadastrarfisica.php">Cadastrar Pessoa</a></li>
-                        <li><a href="cadastrarjuridica.php">Cadastrar Empresa</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="buscarfisica.php">Buscar Pessoa</a></li>
                     </ul>
                 </li>
 
@@ -62,13 +57,17 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Veículo<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="cadastrarveiculo.php">Cadastrar Veículo</a></li>
-                        <!-- <li><a href="cadastrarjuridica.php">Cadastrar Empresa</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="buscarcarro.php">Buscar Veículo</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conserto<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cadastrarconserto.php">Registar Conserto</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>-->
+                        <li><a href="buscarconserto.php">Buscar Conserto</a></li>
                     </ul>
                 </li>
 

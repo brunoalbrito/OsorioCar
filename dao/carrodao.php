@@ -29,8 +29,8 @@ class CarroDao
 			$guarda = array();
 			$fisica = array();
 			$carro = array();
-			include '../model.pessoa.php';
-			include '../model.carro.php';
+			include '../model/pessoa.php';
+			include '../model/carro.php';
 			while ($row = mysqli_fetch_array($resultado)) {
 			// echo '</br>'.$row['nome'].'</br>'.$row['modelo'].'</br>'.$row['ano'].'</br>'.$row['placa'];
 			// $fisica = new Fisica(null,$row['nome'], null, null, null);

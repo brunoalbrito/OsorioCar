@@ -8,7 +8,14 @@ include 'menusystem.php';
 </head>
 <body>
 	<div class='content' style='background:gray;'>
-		<!-- RAW -->
+		<?php 
+			include '../control/controller.php';
+
+			$result = Controller::buscarConserto($_POST['placa']);
+
+			for ($i=0; $i < count($result); $i+=3) { 
+				echo "
+					<!-- RAW -->
 		<div class='col-md-12 col-sm-12 col-xs-12' style='border-style:solid;'>
 			<!-- PESSOA -->
 
@@ -18,7 +25,7 @@ include 'menusystem.php';
 						Proprietario:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						Bruno
+						".$result[$i]->nome."
 					</div>
 				</div>
 
@@ -27,7 +34,7 @@ include 'menusystem.php';
 						Telefone:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						4242-2744
+						".$result[$i]->telefone."
 					</div>
 				</div>
 			</div>
@@ -39,7 +46,7 @@ include 'menusystem.php';
 						Placa:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						NHD-0990
+						".$result[$i+1]->placa."
 					</div>
 				</div>
 
@@ -48,7 +55,7 @@ include 'menusystem.php';
 						Modelo:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						Civic
+						".$result[$i+1]->modelo."
 					</div>
 				</div>
 
@@ -57,7 +64,7 @@ include 'menusystem.php';
 						Ano:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						1999
+						".$result[$i+1]->ano."
 					</div>
 				</div>
 
@@ -66,7 +73,7 @@ include 'menusystem.php';
 						Marca:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						Honda
+						".$result[$i+1]->marca."
 					</div>
 				</div>
 			</div>
@@ -78,7 +85,7 @@ include 'menusystem.php';
 						Data de Execução:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						17/02/2016
+						".$result[$i+2]->data."
 					</div>
 				</div>
 
@@ -87,7 +94,7 @@ include 'menusystem.php';
 						Descrição:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						Troca de Vela com troca dos cabos de vela e tudo e mais tudo
+						".$result[$i+2]->descricao."
 					</div>
 				</div>
 
@@ -96,7 +103,7 @@ include 'menusystem.php';
 						Peças Utilizadas:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						Jogo de Velas
+						".$result[$i+2]->pecasUtilizadas."
 					</div>
 				</div>
 			</div>
@@ -106,7 +113,7 @@ include 'menusystem.php';
 						Valor Pecas:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						199
+						".$result[$i+2]->valorPecas."
 					</div>
 				</div>
 				<div class='col-md-4 col-sm-4 col-xs-12' style='background:green;border-style:solid;'>
@@ -114,7 +121,7 @@ include 'menusystem.php';
 						Valor Mão de Obra:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						100.5
+						".$result[$i+2]->valorMaodeObra."
 					</div>
 				</div>
 				<div class='col-md-4 col-sm-4 col-xs-12' style='background:green;border-style:solid;'>
@@ -122,12 +129,15 @@ include 'menusystem.php';
 						Valor Total:
 					</div>
 					<div class='col-md-12 col-sm-12 col-xs-12'>
-						299.5xx
+						".$result[$i+2]->valorTotal."
 					</div>
 				</div>
 			</div>
 
-		</div>
+		</div>																																			
+				";
+			}
+		?>
 		<!-- END CONTENT -->
 	</div>
 </body>

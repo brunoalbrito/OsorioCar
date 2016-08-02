@@ -18,7 +18,11 @@ class Conserto
 		$this->pecasUtilizadas = $pecasUtilizadas;
 		$this->descricao = $descricao;
 		$this->valorMaodeObra = $valorMaodeObra;
-		$this->valorTotal = ($this->valorPecas + $this->valorMaodeObra);
+		$this->valorTotal = Conserto::calcularValorTotal($this->valorPecas,$this->valorMaodeObra);
+	}
+
+	public static function calcularValorTotal($valorPecas,$valorMaodeObra){
+		return ($valorPecas + $valorMaodeObra);
 	}
 }
 

@@ -113,5 +113,12 @@ class Controller
 		ConsertoDao::adicionarConserto($conserto);
 		echo '</br>Cadastro realizado com sucesso';
 	}
+
+	public static function buscarConserto($placa){
+		$array = ConsertoDAO::pesquisarConserto($placa);
+
+		#print_r($array);
+		return $array;
+	}
 }
 ?>
