@@ -25,12 +25,12 @@ class FisicaDAO
 	}
 
 	public static function buscarFisica($fisica){
-		#echo '</br>Dentro do daobuscarFisica: '.$fisica->nome .'/'. $fisica->sobrenome;
+		echo '</br>Dentro do daobuscarFisica: '.$fisica->nome .'/'. $fisica->sobrenome.' / '.$fisica->id;
 
 		include 'conexao.php'; 
 		$resultado = mysqli_query($conexao, "SELECT pessoa.idPessoa,pessoa.nome,pessoa.telefone,fisica.sobrenome,fisica.cpf 
 			FROM pessoa INNER JOIN fisica ON pessoa.idPessoa=fisica.fk_id_pessoa 
-			WHERE nome = '".$fisica->nome."' AND fisica.sobrenome = '".$fisica->sobrenome."'") or die("Não foi possível executar a SQL: " . mysqli_error($conexao));
+			WHERE nome = '".$fisica->nome."' AND fisica.sobrenome = '".$fisica->sobrenome."' or idPessoa = '".$fisica->id."'") or die("Não foi possível executar a SQL: " . mysqli_error($conexao));
 
 		$array = array();
 
@@ -42,6 +42,33 @@ class FisicaDAO
 			}
 		}
 		return $array;
+	}
+	public static function excluirFisica($id){
+		echo '<br>Chamando inside function DAO '.$id;
+		include 'conexao.php'; 
+
+		$resultado = mysqli_query($conexao,"DELETE from pessoa where idPessoa = '".$id."'")or die(mysqli_error().'Sorry connection fail');
+
+		if($resultado){
+			echo '</br>Delete doing with sucess';
+		}
+	}
+
+	public static function alterarFisica($fisica){
+		include 'conexao.php';
+
+		echo "</br>ID: ".$fisica->id." Nome: ".$fisica->nome." /Sobrenome: ".$fisica->sobrenome." /Telefone: ".$fisica->telefone." /Cpf: ".$fisica->cpf;
+
+		$resultado = mysqli_query($conexao,'UPDATE pessoa SET nome = "'.$fisica->nome.'",telefone = "'.$fisica->telefone.'" 
+			WHERE idPessoa = "'.$fisica->id.'"')or die(mysql_error($conexao));
+
+		$resultado1 = mysqli_query($conexao,'UPDATE fisica SET sobrenome = "'.$fisica->sobrenome.'",
+			cpf = "'.$fisica->cpf.'" WHERE fk_id_pessoa ="'.$fisica->id.'"')or die(mysql_error($conexao));
+
+		if ($resultado === TRUE || $resultado1 === TRUE) {
+			echo "<br/>Alteraçao alterado com sucesso!";
+			#header('Location: alterarAgenda.php');
+		} 
 	}
 }
 ?>

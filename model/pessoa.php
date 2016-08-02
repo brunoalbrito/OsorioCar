@@ -4,7 +4,7 @@
 
 class Pessoa
 {
-	public $id = null;
+	public $id = 0;
 	public $nome = null;
 	public $telefone = null;
 

@@ -42,7 +42,7 @@ if ((!isset($_SESSION['usuario'])) || (!isset($_SESSION['senha']))) {
     $resultado2 = mysqli_query($conexao, "UPDATE fisica SET rg = '" . $rg . "',cpf = '".$cpf."' WHERE fkPessoa='".$idPessoa."'") or die("No foi possivel executar a SQL: " . mysqli_error($conexao));
     //SE AS INSERÇÕES OCORREREM COM SUCESSO RETORNA À PAGINA AGENDA "PRINCIPAL"
     if ($resultado1 === TRUE && $resultado2 === TRUE) {
-        echo "<br/>Usuario alterado com sucesso!";
+        echo "<br/>Alteraçao alterado com sucesso!";
         header('Location: alterarAgenda.php');
     }
 

@@ -29,8 +29,8 @@
 
 		include '../control/controller.php';
 
-		$array = Controller::buscarFisica($_GET['nome'],$_GET['sobrenome']);
-
+		$array = Controller::buscarFisica(null,$_GET['nome'],null,$_GET['sobrenome'],null);
+		
 		// foreach ($array as $value) {
 		// 	print("</br>".$value->nome." / ".$value->sobrenome." / ".$value->telefone." / ".$value->cpf);
 		// }
@@ -105,7 +105,7 @@
 					Alterar:
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<a href="#">Alterar</a> 
+					<a href="editaralteracocoesfisica.php?id='.$value->id.'">Alterar</a> 
 				</div>
 			</div>
 
@@ -115,7 +115,7 @@
 					Excluir:
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<a href="#">Excluir</a>
+					<a href="../control/controller.php?act=excluirFisica&id='.$value->id.'"">Excluir</a>
 				</div>
 			</div>
 
