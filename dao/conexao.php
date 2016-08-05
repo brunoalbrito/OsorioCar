@@ -1,6 +1,6 @@
 <?php
 
-echo "</br>Chamando conexao";
+//echo "</br>Chamando conexao";
 
 //conexão com o banco de dados
 $banco = "osoriocar";

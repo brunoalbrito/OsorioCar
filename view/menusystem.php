@@ -56,7 +56,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Veículo<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="cadastrarveiculo.php">Cadastrar Veículo</a></li>
+                        <li><a href="buscarfisicatocarro.php">Cadastrar Veículo</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="buscarcarro.php">Buscar Veículo</a></li>
                     </ul>
@@ -65,7 +65,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conserto<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="cadastrarconserto.php">Registar Conserto</a></li>
+                        <li><a href="buscarcarrotoconserto.php">Registar Conserto</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="buscarconserto.php">Buscar Conserto</a></li>
                     </ul>

@@ -17,6 +17,15 @@ include 'menusystem.php';
 		<div class="col-md-6 col-sm-12 col-xs-12 text-middle">
 			<form class="text-middle" method='post' action='../control/controller.php?act=cadastrarCarro'>
 				<div class="form-group">
+					<?php 
+
+                        include '../control/controller.php';
+
+                        $array = Controller::buscarFisica(null,$_GET['nome'],null,$_GET['sobrenome'],null);
+
+                        print_r($array);
+                        echo "<input type='text' class='form-control' id='#' name='fkidpessoa' value='".$array[0]->id."' readonly>";
+                    ?>
 					<label>Modelo</label>
 					<div class="input-group">
 						<span class="input-group-addon"><!-- <i class="fa fa-user" aria-hidden="true"></i> --></span>

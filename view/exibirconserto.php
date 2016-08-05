@@ -11,7 +11,9 @@ include 'menusystem.php';
 		<?php 
 			include '../control/controller.php';
 
-			$result = Controller::buscarConserto($_POST['placa']);
+			$placa = $_POST['placa'];
+
+			$result = Controller::buscarConserto($placa);
 
 			for ($i=0; $i < count($result); $i+=3) { 
 				echo "

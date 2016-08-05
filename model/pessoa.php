@@ -15,7 +15,6 @@ class Pessoa
 		}
 		$this->nome = $nome;
 		$this->telefone = $telefone;
-		echo "</br>Criando Pessoa";
 	} 
 }
 
@@ -31,13 +30,11 @@ class Fisica extends Pessoa
 	{
 		if($id == null){
 			parent::__construct(null,$nome,$telefone);
-			echo "</br>Chamando id igual a null";
 		}else{
 			parent::__construct($id,$nome,$telefone);
 		}
 		$this->sobrenome = $sobrenome;
 		$this->cpf = $cpf;
-		echo "</br>Criando Pessoa Fisica";
 	}
 }
 

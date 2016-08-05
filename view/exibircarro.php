@@ -31,6 +31,7 @@
 			$placa = $_POST['placa'];
 			
 			$array = Controller::buscarCarro($placa);
+			print_r($array);
 			echo '</br>';
 			//print_r($array);
 			for ($i=0; $i < count($array); $i+=2) { 

@@ -28,7 +28,13 @@ include 'menusystem.php';
             <div class="form-group">
                 <label>FK id do carro para facilitar cadastro inicial</label>
                 <div class="form-group"> 
-                    <input type="text" class="form-control" id="#" name="fkidcarro" value='1' disabled>
+                    <?php 
+
+                        include '../control/controller.php';
+
+                        $array = Controller::buscarCarro($_POST['placa']);
+                        echo "<input type='text' class='form-control' id='#' name='idcarro' value='".$array[0]->id."' readonly>";
+                    ?>
                 </div>
             </div>
 

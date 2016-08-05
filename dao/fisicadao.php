@@ -25,7 +25,6 @@ class FisicaDAO
 	}
 
 	public static function buscarFisica($fisica){
-		echo '</br>Dentro do daobuscarFisica: '.$fisica->nome .'/'. $fisica->sobrenome.' / '.$fisica->id;
 
 		include 'conexao.php'; 
 		$resultado = mysqli_query($conexao, "SELECT pessoa.idPessoa,pessoa.nome,pessoa.telefone,fisica.sobrenome,fisica.cpf 
@@ -36,9 +35,7 @@ class FisicaDAO
 
 		if ($resultado) {
 			while ($row = mysqli_fetch_array($resultado)) {
-				#echo "</br>".$idPessoa = ($row["nome"]);
 				array_push($array, new Fisica($row["idPessoa"],$row["nome"],$row["telefone"],$row["sobrenome"],$row["cpf"]));
-				#echo $row['idPessoa'];
 			}
 		}
 		return $array;
