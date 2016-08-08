@@ -24,6 +24,8 @@ include 'menusystem.php';
                         $array = Controller::buscarFisica(null,$_GET['nome'],null,$_GET['sobrenome'],null);
 
                         print_r($array);
+
+                        print_r($array);
                         echo "<input type='text' class='form-control' id='#' name='fkidpessoa' value='".$array[0]->id."' readonly>";
                     ?>
 					<label>Modelo</label>

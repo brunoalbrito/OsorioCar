@@ -4,6 +4,7 @@
 */
 class Conserto
 {
+	public $idcarro = null;
 	public $data = null;
 	public $valorPecas = null;
 	public $pecasUtilizadas = null;
@@ -11,8 +12,9 @@ class Conserto
 	public $valorMaodeObra = null;
 	public $valorTotal = null;
 	
-	function __construct($data,$valorPecas,$pecasUtilizadas,$descricao,$valorMaodeObra)
+	function __construct($idcarro,$data,$valorPecas,$pecasUtilizadas,$descricao,$valorMaodeObra)
 	{
+		$this->idcarro = $idcarro;
 		$this->data = $data;
 		$this->valorPecas = $valorPecas;
 		$this->pecasUtilizadas = $pecasUtilizadas;

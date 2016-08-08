@@ -35,6 +35,7 @@ class FisicaDAO
 
 		if ($resultado) {
 			while ($row = mysqli_fetch_array($resultado)) {
+				echo '</br>'.$row["idPessoa"];
 				array_push($array, new Fisica($row["idPessoa"],$row["nome"],$row["telefone"],$row["sobrenome"],$row["cpf"]));
 			}
 		}

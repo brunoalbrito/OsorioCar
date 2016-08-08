@@ -103,8 +103,8 @@ class Controller
 	//------------------------------------------------------------------------------------------------------------------
 	public static function registarConserto($idcarro,$data,$valorPecas,$pecasUtilizadas,$descricao,$valorMaodeObra){
 
-		$conserto = new Conserto($data,floatval($valorPecas),$pecasUtilizadas,$descricao,$valorMaodeObra);
-		ConsertoDao::adicionarConserto($conserto,$idcarro);
+		$conserto = new Conserto($idcarro,$data,floatval($valorPecas),$pecasUtilizadas,$descricao,$valorMaodeObra);
+		ConsertoDao::adicionarConserto($conserto);
 		echo '</br>Cadastro realizado com sucesso';
 	}
 
